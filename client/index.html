@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Chat</title>
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
+	<script src="chat.js"></script>
+</head>
+<body>
+	<div id="messages-holder">
+		<ul id="messages"></ul>
+	</div>
+	<div id="input">
+		<textarea id="message" placeholder="Be nice!" cols="30" rows="2" required minlength="1"></textarea>
+		<button id="send">Send</button><br>
+	</div>
+	<div id="tools">
+		<label>
+			Nick: <input id="nickname" type="text" value="Anonymous user" required minlength="1">
+		</label>
+	</div>
+</body>
+</html>
