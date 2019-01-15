@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Choose a chat room</title>
+	<link rel="stylesheet" type="text/css" href="common.css">
+	<style>
+		h1 {
+			margin-left: 0.5em;
+			margin-right: 0.5em;
+			border-bottom: 1px solid #a9a;
+		}
+
+		form {
+			margin: 0.5em;
+		}
+
+		label {
+			display: inline-block;
+			min-width: 3em;
+		}
+
+		input {
+			margin: 0.25em 0;
+		}
+	</style>
+	<script>
+		function goToChat() {
+			let host = document.getElementById( 'host' ).value;
+			let port = document.getElementById( 'port' ).value;
+			location.replace( './chat.html?ip=' + host + '&port=' + port );
+		}
+	</script>
+</head>
+<body>
+	<a href="https://github.com/mainframe98/SimplePythonChat"><img id="github" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
+	<h1>Choose a chat room</h1>
+	<form id="gate">
+		<label for="host">Host:</label>
+		<input id="host" required value="localhost"><br>
+		<label for="port">Port:</label>
+		<input id="port" required value="4000" type="number" min="0" max="65535"><br>
+		<label for="submit"></label>
+		<input id="submit" type="button" value="Chat!" onclick="goToChat()"/>
+	</form>
+</body>
+</html>
